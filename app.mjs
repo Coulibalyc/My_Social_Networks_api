@@ -12,6 +12,8 @@ import PollQuestions from './controllers/pollQuestions.mjs';
 import PollResponses from './controllers/pollResponses.mjs';
 import routertickettype from './routes/ticketTypeRoutes.mjs';
 import routerticket from './routes/ticketRoutes.mjs';
+import Carpools from './controllers/carpoolController.mjs';
+import ShoppingList from './controllers/shoppingListController.mjs';
 dotenv.config();
 connectDB();
 
@@ -32,6 +34,8 @@ new Threads(app);
 new Polls(app);
 new PollQuestions(app);
 new PollResponses(app);
+new Carpools (app);
+new ShoppingList(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Serveur démarré sur le port ${PORT}`));
